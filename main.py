@@ -39,7 +39,8 @@ def calculate_score(guesser):
     score = 0
     print(f'{Fore.YELLOW}GUESSER: {guesser}{Style.RESET_ALL}\n')
     for i, header in enumerate(guesses.keys()):
-        compare = guesses[header] == answers[header]
+        guess = guesses[header].strip().lower()
+        compare = guess == answers[header].strip().lower()
         color = Fore.GREEN if compare else Fore.RED
         print(f'{color}{header} | {guesses[header]}{Style.RESET_ALL}')
         parse_score_from_header = [int(s) for s in header.split() if s.isdigit()]
