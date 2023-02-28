@@ -31,6 +31,8 @@ def read_responses(filename='responses.csv'):
             for j in range(2, len(row)):
                 response[headers[j]] = row[j]
             global responses
+            if person in responses:
+                person += f'🍑 TIME({row[0]})'
             responses[person] = response
         
 
