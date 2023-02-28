@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+answers.csv
+finalscores.txt
+responses.csv
